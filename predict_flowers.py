@@ -22,7 +22,6 @@ def train():
 
 		weighted = point[0] * w1 + point[1] * w2 + b 	#weight_me
 		probability = sigmoid(weighted)
-		error = np.square(probability - point[2])
 
 		d_error_prediction = 2 * (probability - point[2])
 		dpred_dsig = derivative_sigmoid(weighted) * d_error_prediction
